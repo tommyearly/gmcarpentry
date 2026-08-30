@@ -48,13 +48,15 @@ const generic: EnquiryRequest = {
   message: "Not sure if we should convert or extend. Can someone visit?",
 };
 
+const previewMail = { imageMode: "url" as const };
+
 const previews = [
-  { id: "attic-customer", label: "Attic enquiry → customer", mail: enquiryCustomerEmail(attic, { imageMode: "data" }) },
-  { id: "attic-business", label: "Attic enquiry → GM", mail: enquiryBusinessEmail(attic, { imageMode: "data" }) },
-  { id: "ext-customer", label: "Extension enquiry → customer", mail: enquiryCustomerEmail(extension, { imageMode: "data" }) },
-  { id: "ext-business", label: "Extension enquiry → GM", mail: enquiryBusinessEmail(extension, { imageMode: "data" }) },
-  { id: "gen-customer", label: "Generic enquiry → customer", mail: enquiryCustomerEmail(generic, { imageMode: "data" }) },
-  { id: "gen-business", label: "Generic enquiry → GM", mail: enquiryBusinessEmail(generic, { imageMode: "data" }) },
+  { id: "attic-customer", label: "Attic enquiry → customer", mail: enquiryCustomerEmail(attic, previewMail) },
+  { id: "attic-business", label: "Attic enquiry → GM", mail: enquiryBusinessEmail(attic, previewMail) },
+  { id: "ext-customer", label: "Extension enquiry → customer", mail: enquiryCustomerEmail(extension, previewMail) },
+  { id: "ext-business", label: "Extension enquiry → GM", mail: enquiryBusinessEmail(extension, previewMail) },
+  { id: "gen-customer", label: "Generic enquiry → customer", mail: enquiryCustomerEmail(generic, previewMail) },
+  { id: "gen-business", label: "Generic enquiry → GM", mail: enquiryBusinessEmail(generic, previewMail) },
 ];
 
 export default function EmailPreviewPage() {
