@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { HomeSections } from "@/components/home/HomeSections";
+import { SiteSaleCard } from "@/components/home/SiteSaleCard";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -14,6 +15,7 @@ export default function HomePage() {
     <>
       <Hero />
       <HomeSections />
+      <SiteSaleCard />
     </>
   );
 }
