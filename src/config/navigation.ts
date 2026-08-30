@@ -82,6 +82,22 @@ export const footerHome = [
   { label: "General Carpentry", href: "/carpentry" },
 ];
 
+export const mobileNavSections: { title: string; items: NavChild[] }[] = [
+  { title: "Attic conversions", items: atticMenu },
+  { title: "Other work", items: footerHome },
+  {
+    title: "Company",
+    items: [
+      { label: "Projects", href: "/projects" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "Videos", href: "/videos" },
+      { label: "About", href: "/about" },
+      { label: "Advice / FAQ", href: "/advice" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+];
+
 export const legalNav = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Cookie Policy", href: "/cookie-policy" },
